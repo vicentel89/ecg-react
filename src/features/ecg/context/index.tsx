@@ -8,6 +8,7 @@ interface EcgTimestamp {
 }
 
 interface ControlsUtils {
+  zoom: number;
   canIncreaseZoom: boolean;
   canReduceZoom: boolean;
   increaseZoom: () => false | void;
@@ -65,6 +66,7 @@ export function EcgProvider({ children }: { children: React.ReactNode }) {
       value={{
         data: selectedData,
         controlsUtils: {
+          zoom,
           canIncreaseZoom,
           canReduceZoom,
           increaseZoom,
